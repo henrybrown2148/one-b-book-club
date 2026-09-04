@@ -71,7 +71,7 @@ body {
     position: relative;
     z-index: 1;
 }
-.hero7 {
+.hero3 {
     height: 100vh;
     background-image: url("/static/images/OneBAboutPage2.png");
     background-size: cover;
@@ -84,7 +84,7 @@ body {
     position: relative;
     z-index: 1;
 }
-.hero3 {
+.hero7 {
     height: 100vh;
     background-image: url("/static/images/OneBBooksPage.png");
     background-size: cover;

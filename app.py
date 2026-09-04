@@ -85,6 +85,15 @@ def writings():
 @app.route("/writings/CreativeWriting")
 def CreativeWriting():
     return render_template("WritingSubmissions.html")
+@app.route("/writings/Poetry")
+def Poetry():
+    return render_template("WritingSubmissions.html")
+@app.route("/writings/Essays")
+def Essays():
+    return render_template("WritingSubmissions.html")
+@app.route("/writings/Articles")
+def Articles():
+    return render_template("WritingSubmissions.html")
 
 @app.route("/books")
 def books():
@@ -128,7 +137,11 @@ BOOKS = {
     "DriveYourPlowOverTheBonesOfTheDead": {
         "title": "Drive Your Plow Over the Bones of the Dead",
         "image": "images/Plow.jpg" 
-    },    
+    },
+    "TheBoxMan": {
+        "title": "The Box Man",
+        "image": "images/Box.jpg"   
+    },      
     "TheOldManAndTheSea": {
         "title": "The Old Man and the Sea",
         "image": "images/Old.jpg" 
