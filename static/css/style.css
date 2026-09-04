@@ -71,6 +71,19 @@ body {
     position: relative;
     z-index: 1;
 }
+.hero7 {
+    height: 100vh;
+    background-image: url("/static/images/OneBAboutPage2.png");
+    background-size: cover;
+    background-position: center;
+
+    
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 1;
+}
 .hero3 {
     height: 100vh;
     background-image: url("/static/images/OneBBooksPage.png");
@@ -87,6 +100,20 @@ body {
 .hero4 {
     height: 100vh;
     background-image: url("/static/images/OneBContactPage.png");
+    background-size: cover;
+    background-position: center;
+
+    
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 1;
+}
+
+.hero6 {
+    height: 100vh;
+    background-image: url("/static/images/OneBContactPage2.png");
     background-size: cover;
     background-position: center;
 
@@ -696,35 +723,3 @@ transform: scale(1.05);
     width: 100%;
 }
 
-@media (max-width: 768px) {
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .book-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-
-    .review {
-        padding: 15px;
-    }
-
-    .book-review {
-        padding: 15px;
-    }
-
-    textarea {
-        width: 100%;
-    }
-}
-img {
-    max-width: 100%;
-    height: auto;
-}
