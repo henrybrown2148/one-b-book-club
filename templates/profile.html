@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+<div class="profile-page">
+    <h1>Profile</h1>
+
+
+
+    
+    <form      method="POST" enctype="multipart/form-data">
+        <label for="profile_picture" class="profile-picture-label">
+            {% if profile_picture %}
+            <img
+                id="profile-preview"        
+                src="{{ url_for('static', filename='uploads/profiles/' ~ profile_picture) }}"
+                class="profile_picture"
+                alt="Profile Picture">
+            {% else %}
+            <img
+                id="profile-preview"
+                src="{{ url_for('static', filename='images/default-profile.png') }}"
+                class="profile_picture">
+            {% endif %}
+        
+
+        </label>
+        <input
+        type="file"
+        id="profile_picture"
+        name="profile_picture"
+        accept=".png,.jpg,.jpeg,.webp">
+
+        <br><br>
+
+        <button type="submit">
+            Save Profile Picture
+        </button>
+
+    </form>
+    <h2>Your Reviews</h2>
+
+    {% if reviews %}
+
+        {% for book, review in reviews %}
+        <div class="profile-review">
+            <h3>{{ book }}</h3>
+            <p>{{ review }}</p>
+        </div>
+        {% endfor %}
+
+    {% else %}
+
+        <p>You have not submitted any reviews yet.</p>
+
+    {% endif %}
+
+    <script>
+    const fileInput = document.getElementById("profile_picture");
+    const profilePreview = document.getElementById("profile-preview");
+
+    fileInput.addEventListener("change", function() {
+        if (this.files.length > 0) {
+            profilePreview.src = URL.createObjectURL(this.files[0]);
+        }
+    });
+    </script>
+</div>
+{% endblock %}

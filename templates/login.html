@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Account{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero5">
+        <div class="hero-text">
+            <h1>Login</h1>
+            
+        </div>
+    </div>
+
+</section>
+
+<div class="main-content">
+
+
+    <section class="page-section">
+
+        {% if 'username' in session %}
+
+            <h1>Welcome {{ session['username'] }}</h1>
+
+            <p>You are already logged in.</p>
+
+            <p>
+                <a href="/books">Browse Books</a>
+        {% else %}
+
+            <h1>Account</h1>
+
+            <h2>Login</h2>
+
+            <form method="POST">
+
+                <input type="hidden" name="action" value="login">
+
+                <label>Username</label><br>
+                <input type="text" name="login_username"><br><br>
+
+                <label>Password</label><br>
+                <input type="password" name="login_password"><br><br>
+
+                <button type="submit">Login</button>
+
+            </form>
+
+            <hr>
+
+            <h2>Create Account</h2>
+
+            <form method="POST">
+
+                <input type="hidden" name="action" value="register">
+
+                <label>Username</label><br>
+                <input type="text" name="register_username"><br><br>
+
+                <label>Email</label><br>
+                <input type="email" name="register_email"><br><br>
+
+                <label>Password</label><br>
+                <input type="password" name="register_password"><br><br>
+
+                <button type="submit">Register</button>
+
+            </form>
+
+        {% endif %}
+    </section>
+</div>
+
+
+
+{% endblock %}
