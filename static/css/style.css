@@ -695,3 +695,36 @@ transform: scale(1.05);
     gap: 30px;
     width: 100%;
 }
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .review {
+        padding: 15px;
+    }
+
+    .book-review {
+        padding: 15px;
+    }
+
+    textarea {
+        width: 100%;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
